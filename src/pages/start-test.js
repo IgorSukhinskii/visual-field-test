@@ -1,17 +1,13 @@
 import React from 'react';
 import Button from 'material-ui/Button';
-import TextField from 'material-ui/TextField';
-import DatePicker from '../components/date-picker';
 import SelectAlgorithm from '../components/select-algorithm';
 import SelectGridType from '../components/select-grid-type';
 import SelectEye from '../components/select-eye';
+import SelectPatient from '../components/select-patient';
 
 const StartTestForm = () => (
     <div>
-        <TextField
-            label="Patient name"
-        />
-        <DatePicker label="Patient's birth date" />
+        <SelectPatient />
         <SelectAlgorithm />
         <SelectGridType />
         <SelectEye />
