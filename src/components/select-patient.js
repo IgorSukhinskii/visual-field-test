@@ -3,13 +3,14 @@ import Select from './select';
 
 const patients = [
     { value: '0', label: 'Igor Sukhinskii' },
-    { value: '1', label: 'Jane Doe' },
+    { value: '1', label: 'Jane Doe' }
 ];
 
-const SelectPatient = () => (
+const SelectPatient = ({className}) => (
     <Select
         label="Patient"
         options={patients}
+        className={className}
     />
 );
 

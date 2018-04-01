@@ -2,16 +2,18 @@ import React from 'react';
 import Button from 'material-ui/Button';
 import TextField from 'material-ui/TextField';
 import DatePicker from '../components/date-picker';
+import { withStyles } from 'material-ui/styles';
+import styles from '../styles/form';
 
-const NewPatientForm = () => (
-    <div>
-        <TextField label="Patient name" />
-        <DatePicker label="Patient's birth date" />
-        <TextField label="Additional notes" />
-        <Button variant="raised" color="primary">
+const NewPatientForm = ({ classes }) => (
+    <div className={classes.testForm}>
+        <TextField label="Patient name" className={classes.field} />
+        <DatePicker label="Patient's birth date" className={classes.field}/>
+        <TextField label="Additional notes" className={classes.field}/>
+        <Button variant="raised" color="primary" className={classes.button}>
             Add new patient
         </Button>
     </div>
 );
 
-export default NewPatientForm;
+export default withStyles(styles)(NewPatientForm);

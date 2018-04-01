@@ -7,10 +7,11 @@ const algorithms = [
     { value: 'full-threshold', label: 'Full Threshold' },
 ];
 
-const SelectAlgorithm = () => (
+const SelectAlgorithm = ({className}) => (
     <Select
         label="Algorithm"
         options={algorithms}
+        className={className}
     />
 );
 

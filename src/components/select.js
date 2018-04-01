@@ -7,6 +7,7 @@ class Select extends Component {
     propTypes = {
         label: string.isRequired,
         helperText: string,
+        className: string,
         options: arrayOf(shape({
             value: string,
             label: string,
@@ -28,7 +29,7 @@ class Select extends Component {
     }
 
     render() {
-        const { label, helperText, options } = this.props;
+        const { label, helperText, options, className } = this.props;
         return (
             <TextField
                 select
@@ -36,6 +37,7 @@ class Select extends Component {
                 helperText={helperText}
                 value={this.state.value}
                 onChange={this.handleChange}
+                className={className}
             >
                 {options.map(option => (
                     <MenuItem key={option.value} value={option.value}>

@@ -6,10 +6,11 @@ const eyes = [
     { value: 'right', label: 'Right' },
 ];
 
-const SelectEye = () => (
+const SelectEye = ({className}) => (
     <Select
         label="Eye"
         options={eyes}
+        className={className}
     />
 );
 
